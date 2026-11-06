@@ -2,109 +2,241 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<title>Viet Bach Locket</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#090909;color:#f5f5f5;line-height:1.6}
-header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292319}
-.logo{font-size:19px;font-weight:bold;color:#e9c66d}
-nav a{color:#ddd;text-decoration:none;margin-left:15px;font-size:13px}
-.hero{text-align:center;padding:85px 20px 75px;background:radial-gradient(ellipse at top,#493719,#090909 65%)}
-.tag{color:#e9c66d;letter-spacing:3px;font-size:12px}
-h1{font-size:42px;margin:18px 0;color:#f5d98b}
-.hero p{color:#bbb;max-width:520px;margin:0 auto 25px}
-.btn{display:inline-block;background:#d9b75d;color:#111;padding:13px 24px;border-radius:7px;text-decoration:none;font-weight:bold}
-section{padding:55px 7%;max-width:1100px;margin:auto}
-h2{text-align:center;color:#e9c66d;margin-bottom:12px}
-.sub{text-align:center;color:#999;margin-bottom:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
-.card{background:#151515;border:1px solid #393023;border-radius:12px;padding:23px}
-.card h3{color:#e9c66d;margin-bottom:10px}
-.card p{color:#aaa;font-size:14px}
-.card a{display:inline-block;margin-top:15px;color:#e9c66d}
-.info{background:#151515;border-radius:12px;padding:25px;color:#bbb}
-.info li{margin:10px 0}
-footer{text-align:center;padding:30px;color:#777;border-top:1px solid #292319;font-size:13px}
-@media(max-width:600px){
- header{padding:16px 5%;flex-wrap:wrap;gap:12px}
- nav{width:100%;display:flex;justify-content:space-between}
- nav a{margin:0;font-size:12px}
- h1{font-size:33px}
- section{padding:45px 6%}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viet Bach Locket - hệ sinh thái dịch vụ và hỗ trợ iOS">
+  <title>Viet Bach Locket | Official Website</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .hero {
+      padding: 110px 0 100px;
+      background: radial-gradient(ellipse at center, #29200e 0%, #080808 70%);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      padding: 7px 16px;
+      margin-bottom: 25px;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 {
+      letter-spacing: 3px;
+      line-height: 1.15;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 11px 22px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 22px;
+    }
+
+    .highlight {
+      color: var(--gold);
+    }
+
+    .card {
+      transition: transform .2s, border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 35px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 20px 8px;
+      background: #151515;
+      border-radius: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: 22px;
+    }
+
+    .stat span {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    @media(max-width: 500px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <header>
- <div class="logo">VB. VIET BACH</div>
- <nav>
-  <a href="#home">Trang chủ</a>
-  <a href="#services">Dịch vụ</a>
-  <a href="#dns">DNS</a>
-  <a href="#contact">Liên hệ</a>
- </nav>
+  <div class="container nav">
+    <a href="/" class="logo">VB. VIET BACH</a>
+
+    <nav class="nav-links">
+      <a href="/">Trang chủ</a>
+      <a href="/pages/services.html">Dịch vụ</a>
+      <a href="/pages/dns.html">DNS</a>
+      <a href="/pages/pricing.html">Bảng giá</a>
+      <a href="/pages/guide.html">Hướng dẫn</a>
+      <a href="/pages/support.html">Hỗ trợ</a>
+      <a href="/pages/contact.html">Liên hệ</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-<section class="hero" id="home">
- <div class="tag">WELCOME TO</div>
- <h1>VIET BACH LOCKET</h1>
- <p>Nền tảng chia sẻ hướng dẫn, cấu hình DNS và hỗ trợ người dùng Locket trên iOS.</p>
- <a class="btn" href="#services">Khám phá ngay</a>
-</section>
 
-<section id="services">
- <h2>DỊCH VỤ CỦA CHÚNG TÔI</h2>
- <p class="sub">Khám phá hệ thống Viet Bach Locket</p>
- <div class="cards">
-  <div class="card">
-   <h3>Locket Guide</h3>
-   <p>Hướng dẫn sử dụng và tìm hiểu các tính năng Locket.</p>
-   <a href="#contact">Tìm hiểu thêm →</a>
-  </div>
-  <div class="card">
-   <h3>DNS Configuration</h3>
-   <p>Chia sẻ cấu hình DNS phục vụ các mục đích hợp pháp và bảo vệ quyền riêng tư.</p>
-   <a href="#dns">Xem hướng dẫn →</a>
-  </div>
-  <div class="card">
-   <h3>iOS Support</h3>
-   <p>Hướng dẫn cài đặt, kiểm tra và xử lý lỗi cấu hình trên iPhone.</p>
-   <a href="#contact">Liên hệ →</a>
-  </div>
- </div>
-</section>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">WELCOME TO VIET BACH LOCKET</div>
 
-<section id="dns">
- <h2>DNS CENTER</h2>
- <p class="sub">Trung tâm hướng dẫn cấu hình</p>
- <div class="info">
-  <h3>Viet Bach DNS</h3>
-  <p>Thông tin cấu hình và hướng dẫn sử dụng sẽ được cập nhật tại đây.</p>
-  <ul>
-   <li>Hướng dẫn cài đặt trên iOS.</li>
-   <li>Kiểm tra trạng thái kết nối.</li>
-   <li>Hướng dẫn tắt và gỡ cấu hình.</li>
-  </ul>
-  <p>Chỉ sử dụng cấu hình có nguồn gốc rõ ràng, không can thiệp hoặc giả mạo quyền thuê bao.</p>
- </div>
-</section>
+      <h1>
+        YOUR DIGITAL<br>
+        <span class="highlight">EXPERIENCE</span>
+      </h1>
 
-<section id="contact">
- <h2>LIÊN HỆ HỖ TRỢ</h2>
- <p class="sub">Viet Bach Locket – Support Center</p>
- <div class="info" style="text-align:center">
-  <p>Cần hỗ trợ? Hãy cập nhật thông tin liên hệ chính thức tại đây.</p>
-  <p style="color:#e9c66d;margin-top:12px">VIET BACH LOCKET © 2026</p>
- </div>
-</section>
+      <p>
+        Khám phá hệ sinh thái Viet Bach Locket.
+        Nơi cung cấp thông tin, hướng dẫn và hỗ trợ
+        các giải pháp cấu hình dành cho thiết bị iOS.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/pages/services.html" class="btn">
+          Khám phá dịch vụ
+        </a>
+
+        <a href="/pages/contact.html" class="btn-outline">
+          Liên hệ chúng tôi
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>iOS</strong>
+          <span>Hệ sinh thái thiết bị</span>
+        </div>
+
+        <div class="stat">
+          <strong>DNS</strong>
+          <span>Trung tâm cấu hình</span>
+        </div>
+
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>Website trực tuyến</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">ABOUT VIET BACH</h2>
+
+    <div class="card">
+      <h3>Không ngừng phát triển</h3>
+      <p>
+        Viet Bach Locket hướng đến xây dựng một nền tảng
+        cung cấp thông tin, tài liệu và hỗ trợ kỹ thuật
+        với trải nghiệm đơn giản, hiện đại và dễ sử dụng.
+      </p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">OUR SERVICES</h2>
+
+    <div class="grid">
+      <article class="card">
+        <h3>01. DNS CENTER</h3>
+        <p>Tìm hiểu và quản lý các hướng dẫn cấu hình DNS.</p>
+        <a href="/pages/dns.html" class="btn">Khám phá</a>
+      </article>
+
+      <article class="card">
+        <h3>02. iOS GUIDE</h3>
+        <p>Tài liệu hướng dẫn sử dụng và thiết lập iPhone.</p>
+        <a href="/pages/guide.html" class="btn">Xem hướng dẫn</a>
+      </article>
+
+      <article class="card">
+        <h3>03. SERVICES</h3>
+        <p>Khám phá các dịch vụ và tiện ích của hệ thống.</p>
+        <a href="/pages/services.html" class="btn">Xem dịch vụ</a>
+      </article>
+
+      <article class="card">
+        <h3>04. PRICING</h3>
+        <p>Tìm hiểu thông tin các gói dịch vụ.</p>
+        <a href="/pages/pricing.html" class="btn">Xem bảng giá</a>
+      </article>
+
+      <article class="card">
+        <h3>05. SUPPORT</h3>
+        <p>Tiếp nhận câu hỏi và hỗ trợ kỹ thuật.</p>
+        <a href="/pages/support.html" class="btn">Nhận hỗ trợ</a>
+      </article>
+
+      <article class="card">
+        <h3>06. CONTACT</h3>
+        <p>Kết nối với đội ngũ Viet Bach Locket.</p>
+        <a href="/pages/contact.html" class="btn">Liên hệ</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="card">
+      <h2 class="section-title">LET'S CONNECT</h2>
+      <p>
+        Bạn cần tìm hiểu thêm về dịch vụ hoặc cần hỗ trợ?
+        Hãy kết nối với Viet Bach Locket.
+      </p>
+      <a href="/pages/contact.html" class="btn">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
 </main>
 
 <footer>
- © 2026 Viet Bach Locket. All rights reserved.
+  <div class="container">
+    <p><strong>VIET BACH LOCKET</strong></p>
+    <p>Technology · Support · Digital Experience</p>
+    <p>© 2026 Viet Bach Locket. All rights reserved.</p>
+    <p>
+      <a href="/pages/services.html">Dịch vụ</a> |
+      <a href="/pages/dns.html">DNS</a> |
+      <a href="/pages/contact.html">Liên hệ</a>
+    </p>
+  </div>
 </footer>
+
 </body>
 </html>
