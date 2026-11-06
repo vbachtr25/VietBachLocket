@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vietbachlocket-web",
+  "compatibility_date": "2026-11-06",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS"
+  }
+}
